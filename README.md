@@ -1,37 +1,29 @@
 // README.md
 # Project Support
 ### Introduction
-Project Support is an open source platform that enable users share causes they're passionate about and actively involved with with the hopes of connecting with other users equally interested in working with them on the given cause.
+This is a versatile API designed to serve as a backend for various types of blog websites. It utilizes Azure SQL Database for efficient management of the database, while images are stored on the local machine. Detailed documentation is available on the home page of the blog API, providing all the necessary information for easy implementation and customization.
 ### Project Support Features
 * Users can signup and login to their accounts
-* Public (non-authenticated) users can access all causes on the platform
-* Authenticated users can access all causes as well as create a new cause, edit their created cause and also delete what they've created.
+* Public (non-authenticated) users can access blogs on the platform
+* Authenticated users can access all causes as well as create a new blog, edit their created blog and also delete what they've created.
 ### Installation Guide
 * Clone this repository [here](https://github.com/blackdevelopa/ProjectSupport.git).
-* The develop branch is the most stable branch at any given time, ensure you're working from it.
-* Run npm install to install all dependencies
-* You can either work with the default mLab database or use your locally installed MongoDB. Do configure to your choice in the application entry file.
-* Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
+* The main branch is the most stable branch at any given time, ensure you're working from it.
+* Run python manage.py runserver to start the server.
+* You can't work with the azure database and your IP wont be allowed, So use your locally installed DB. Do configure to your choice in the application entry file.
 ### Usage
-* Run npm start:dev to start the application.
+* Run python manage.py runserver to start the application.
 * Connect to the API using Postman on port 7066.
 ### API Endpoints
 | HTTP Verbs | Endpoints | Action |
 | --- | --- | --- |
-| POST | /api/user/signup | To sign up a new user account |
-| POST | /api/user/login | To login an existing user account |
-| POST | /api/causes | To create a new cause |
-| GET | /api/causes | To retrieve all causes on the platform |
-| GET | /api/causes/:causeId | To retrieve details of a single cause |
-| PATCH | /api/causes/:causeId | To edit the details of a single cause |
-| DELETE | /api/causes/:causeId | To delete a single cause |
+| POST | /api/token |Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.|
+| POST | POST /api/token/refresh/ |Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.|
+| POST | /api/user/register/ | To create a new user |
+| POST | /api/createblog/ | To create the blog |
+| DELETE | /api/deleteblog/{id} | To delete  a blog |
+| GET | /api/getallblog/| To get all the blogs |
+| GET | /api/getblog/{id}/ | To retrieve a single blog |
 ### Technologies Used
-* [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
-* [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.
-* [MongoDB](https://www.mongodb.com/) This is a free open source NOSQL document database with scalability and flexibility. Data are stored in flexible JSON-like documents.
-* [Mongoose ODM](https://mongoosejs.com/) This makes it easy to write MongoDB validation by providing a straight-forward, schema-based solution to model to application data.
-### Authors
-* [Black Developa](https://github.com/blackdevelopa)
-* ![alt text](https://avatars0.githubusercontent.com/u/29962968?s=400&u=7753a408ed02e51f88a13a5d11014484bc4d80ee&v=4)
-### License
-This project is available for use under the MIT License.
+* [Django](https://www.djangoproject.com/) Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+* [Azure](https://azure.microsoft.com/en-us/ )Microsoft Azure, often referred to as Azure, is a cloud computing platform operated by Microsoft that provides access, management, and development of applications and services via globally-distributed data centers.
