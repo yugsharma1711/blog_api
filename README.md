@@ -1,7 +1,7 @@
 // README.md
 # Project Support
 ### Introduction
-This is a versatile API designed to serve as a backend for various types of blog websites. It utilizes Azure SQL Database for efficient management of the database, while images are stored on the local machine. Detailed documentation is available on the home page of the blog API, providing all the necessary information for easy implementation and customization.
+This is a versatile API designed to serve as a backend for various types of blog websites. It utilizes  SQL Database for efficient management of the database, while images are stored on the local machine. Detailed documentation is available on the home page of the blog API, providing all the necessary information for easy implementation and customization.
 ### Project Support Features
 * Users can signup and login to their accounts
 * Public (non-authenticated) users can access blogs on the platform
