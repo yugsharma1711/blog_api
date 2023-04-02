@@ -26,4 +26,4 @@ This is a versatile API designed to serve as a backend for various types of blog
 | GET | /api/getblog/{id}/ | To retrieve a single blog |
 ### Technologies Used
 * [Django](https://www.djangoproject.com/) Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
-* [Azure](https://azure.microsoft.com/en-us/ )Microsoft Azure, often referred to as Azure, is a cloud computing platform operated by Microsoft that provides access, management, and development of applications and services via globally-distributed data centers.
+* [Railway](https://railway.app/) Raiway is a cloud computing platform that provides access, management, and development of applications and services via globally-distributed data centers.
